@@ -1,37 +1,53 @@
-public class Student {
+/* Nick Carnevale
+ * Mrs. Kalafut
+ * 4/30
+ * 
+ * Participation
+ * This class extends LehighPerson and initalizes new class members to student object
+ */
 
-  private double myGPA;
+public class Student extends LehighPerson{
 
-  private int myCredits;
+	//private members
+	private String major;
+	private String anticipatedGradDate;
+	private static int totalCSEnrollment = 0;
+	
+	//blank constructor
+	public Student() {}
+	
+	//2-arg constructor
+	public Student(String lin, String email) {
+		super(lin, email);
+	}
+		
+	//5-arg constructor
+	public Student(String name, String address, String brithdate, String lin, String email){
+		super(name, address, brithdate, lin, email);
+	}
+	
+	//set methods
+	public void setMajor(String major) {
+		this.major = major;
+	}
+	
+	public void setAnticipatedGradDate(String anticipatedGradDate) {
+		this.anticipatedGradDate = anticipatedGradDate;
+	}
+	
+	//get methods
+	public String getMajor() {
+		return major;
+	}
 
-  public void increaseCredits(int amount) {
-
-    myCredits = myCredits + amount;
-
-  }
-
-  public void setCredits(int credits) {
-
-    myCredits = credits;
-
-  }
-
-  public int getCredits() {
-
-    return myCredits;
-
-  }
-
-  public static void main(String [] args) {
-
-    Student s = new Student();
-
-    s.setCredits(6);
-
-    s.increaseCredits(12);
-
-    System.out.println(s.getCredits());
-
-  }
-
+	public String getAnticipatedGradDate() {
+		return anticipatedGradDate;
+	}
+	
+	public static int getTotalCSEnrollment() {
+		return totalCSEnrollment;
+	}
+	
 }
+
+
