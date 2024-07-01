@@ -1,0 +1,85 @@
+//Nick Carnevale
+//Prof. Kalafut
+//3/23
+//CardsMethods
+//Adding a method to cards.java and utilizing it to return the identity of the card
+
+public class CardsMethods {
+
+	//new method created to get the identity of the card
+	//returns a string and has a int parameter. 
+	public static String getCardIdentity(int type) {
+		String cardIdentity;
+		
+		switch(type) {
+		case 0: cardIdentity = "Ace"; break;
+		case 1: cardIdentity = "2"; break;
+		case 2: cardIdentity = "3"; break;
+		case 3: cardIdentity = "4"; break;
+		case 4: cardIdentity = "5"; break;
+		case 5: cardIdentity = "6"; break;
+		case 6: cardIdentity = "7"; break;
+		case 7: cardIdentity = "8"; break;
+		case 8: cardIdentity = "9"; break;
+		case 9: cardIdentity = "10"; break;
+		case 10: cardIdentity = "Jack"; break;
+		case 11: cardIdentity = "Queen"; break;
+		case 12: cardIdentity = "King"; break;
+		default: cardIdentity = null;
+		
+		}
+		return cardIdentity;	
+	}
+	
+	//method to get the suit name
+	public static String getSuitName(int suit) {
+		String suitName;
+		
+		if(suit ==0) {
+			suitName = "Diamonds";
+		}
+		else if(suit == 1) {
+			suitName = "Clubs";
+		}
+		else if(suit == 2) {
+			suitName = "Hearts";
+		}
+		else {
+			suitName = "Spades";
+		}
+		
+		return suitName;
+	}
+	
+	
+	public static void main(String[] args) {
+
+		//declaring variables
+		int card;
+		int suit;
+		int type;
+		
+		//generating random number between 0-51
+		card = (int) (Math.random()*52);
+		String suitName;
+		String cardIdentity;
+		
+		//getting the suit 0-3 of the random number
+		suit = (int) Math.ceil(card/13);
+		
+		//assign the suit name
+		suitName = getSuitName(suit);
+		
+		//getting the card identity by modulusing card
+		type = card%13;
+		
+		//assign the card type
+		cardIdentity = getCardIdentity(type);
+		
+		//print out the result
+		System.out.println("You picked the " + cardIdentity+ " of " +suitName);
+		
+		
+	}
+
+}
