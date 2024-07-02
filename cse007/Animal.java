@@ -16,7 +16,7 @@ public class Animal {
 	//blank constructor
 	public Animal() {
 		numAnimals++;
-		hi = 0;
+		hi = 1;
 	}
 	
 	//constructor with variables initialized
