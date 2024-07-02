@@ -10,11 +10,13 @@ public class Animal {
 	//private variables for animal
 	private double height;
 	private double weight;
+	private double hi;
 	private static int numAnimals;
 	
 	//blank constructor
 	public Animal() {
 		numAnimals++;
+		hi = 0;
 	}
 	
 	//constructor with variables initialized
