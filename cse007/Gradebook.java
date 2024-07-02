@@ -2,6 +2,7 @@ import java.util.Arrays;
 public class Gradebook{
    
 	public static void main(String [] args){
+		
         int [][] gradesArray = {{87,96,70},
                                 {68,87,90},
                                 {94,100,90},
@@ -38,6 +39,7 @@ public class Gradebook{
 				average[i] /= arr.length;
 			}
 		}
+		System.out.println("hi");
 
 		return average;
 	}
